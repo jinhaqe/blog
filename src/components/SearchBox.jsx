@@ -6,6 +6,18 @@ const Img = styled.img`
    cursor: pointer;
 `;
 
+const Search_Box = styled.div`
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+
+   & .search {
+      width: 24px;
+      height: 24px;
+      margin-right: 30px;
+   }
+`;
+
 function SearchBox({ onSearch }) {
    const [userInput, setUserInput] = useState("");
    const searchRef = useRef("");
@@ -21,7 +33,7 @@ function SearchBox({ onSearch }) {
    };
 
    return (
-      <div className="searchBox">
+      <Search_Box>
          <input
             type="text"
             placeholder="검색..."
@@ -35,7 +47,7 @@ function SearchBox({ onSearch }) {
             alt="검색 아이콘"
             onClick={handleSearchClick} // 클릭 시 onSearch 호출
          />
-      </div>
+      </Search_Box>
    );
 }
 

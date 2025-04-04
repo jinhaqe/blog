@@ -97,7 +97,7 @@ function App() {
                      key={post.id}
                      post={post}
                      users={users}
-                     onClick={openDialog} // 모달창의 열림 상태를 저장하는 함수 전달
+                     onClick={openDialog} // 모달창의 열림 상태를 저장하는 함수
                   />
                ))}
             </div>
