@@ -1,10 +1,10 @@
 import React from "react";
 
-const Modal = ({ post, users, onClose }) => {
+function Modal({ post, users, onClose }) {
    const author = users.find((user) => user.id === post.userId);
 
    return (
-      <div className="modalBackdrop" onClick={onClose}>
+      <div className="modalBackdrop">
          <div className="modal">
             <h3>{post.title}</h3>
             <p>{post.body}</p>
@@ -13,6 +13,6 @@ const Modal = ({ post, users, onClose }) => {
          </div>
       </div>
    );
-};
+}
 
 export default Modal;
