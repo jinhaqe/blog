@@ -1,12 +1,55 @@
-# React + Vite
+# 블로그 형식 제작
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+사용자 목록 및 글에 관한 Api를 호출하고 해당 데이터를 이용하여 블로그 형식을 제작하였습니다.
 
-Currently, two official plugins are available:
+<br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 1. 개발 환경
+  - React
+  - Vite
+  - Styled-components
 
-## Expanding the ESLint configuration
+<br>
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 2. 현재 디렉토리
+```
+/src
+├── components/            
+│   ├── BlogPost/           # 블로그 글 목록을 표시하며, 각 글 클릭 시 모달을 띄우는 트리거 역할.
+│   ├── Modal/              # 블로그 글 클릭 시 세부 내용과 작성자 정보를 모달 창으로 표시.
+│   └── SearchBox/          # 우측 상단에 위치한 검색 박스 컴포넌트로, 사용자가 입력한 검색어를 처리하고 글 목록을 필터링.
+│
+├── App.js                  # 애플리케이션의 최상위 컴포넌트. 사용자와 블로그 글 목록을 API로 받아오고, 검색 기능을 처리.
+└── index.js                # 앱 진입점
+
+```
+
+<br>
+
+## 3. 주요 기능
+
+   ### 1) 블로그 글 목록 표시
+   - 사용자가 API를 통해 받아온 블로그 글 목록을 화면에 표시
+   - 각 글은 제목과 글 및 작성자 이름을 카드 형식으로 보여줌
+     
+   <br>
+    
+   ### 2) 검색 기능
+   - 우측 상단에 위치한 검색 박스를 통해 사용자가 입력한 검색어로 블로그 글 목록을 필터링
+   - 실시간으로 글 목록이 검색어에 맞게 업데이트 진행
+  
+   <br>
+   
+   ### 3) 블로그 글 상세 보기 (모달)
+   - 사용자가 블로그 글을 클릭하면 해당 글의 상세 내용과 작성자 정보를 모달을 띄움
+   - 모달 창에서 글의 세부 정보를 확인 할 수 있음
+
+   <br>
+
+## 3. 결과 화면
+
+<br>
+
+![image](https://github.com/user-attachments/assets/b11d67a1-8e24-430f-b0ff-4f704e565a38)
+
+
